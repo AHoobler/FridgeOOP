@@ -56,7 +56,7 @@ namespace FridgeOOP
             this.dispenserType = dispenserType;
         }
 
-        public Fridge(bool isClean, string dispenserType, bool bulbsWork, int foodAmount)
+        public Fridge(bool isClean, string dispenserType, int foodAmount, bool bulbsWork)
         {
             this.isClean = isClean;
             this.foodAmount = foodAmount;
@@ -107,9 +107,9 @@ namespace FridgeOOP
 
         }
         //Clean it
-        public string Clean(bool isDirty) // pass in a bool
+        public string Clean() // pass in a bool
         {
-            if  (isDirty)
+            if  (isClean == false)
             {
                 isClean = true;
                 return "I cleaned the fridge";
